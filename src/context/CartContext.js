@@ -1,6 +1,7 @@
 import {  createContext, useEffect, useState } from "react";
 import {  useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
+import Swal from 'sweetalert2';
 
 export const CartContext=createContext()
 
@@ -21,10 +22,17 @@ export const CartProvider=({children})=>{
 
     const addTocart=(p)=>{
         if(!userId){
-            alert("Please login to continue")
+  Swal.fire({
+    title: "Error!",
+    text: "Please login to continue",
+    icon: "error",
+    confirmButtonText: "OK"
+  });
+
             navigate("/login")
             return
         }
+        toast.success("Item added to cart")
         
          const exist=cart.find((curr)=>curr.id===p.id)
 
@@ -34,14 +42,21 @@ export const CartProvider=({children})=>{
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({qty:exist.qty+1})
             })
+            
             .then(()=>{
+               
                setCart(prev=>
                 prev.map(curr=>
                     curr.id===exist.id
                     ?{...curr,qty:curr.qty+1} :curr
+
+                
                 )
+                
                )
             })
+            
+            
             
 
          }
@@ -130,7 +145,12 @@ export const CartProvider=({children})=>{
        }
 
         if(!userId){
-            alert("please login to continue")
+            Swal.fire({
+    title: "Error!",
+    text: "Please login to continue",
+    icon: "error",
+    confirmButtonText: "OK"
+  });
             navigate("login")
             return;
         }

@@ -3,6 +3,9 @@ import { Button, Col, Row } from 'react-bootstrap'
 import {  useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import "./Payment.css"
+import { toast } from 'react-toastify'
+import Swal from 'sweetalert2';
+
 const Payment = () => {
   const navigate=useNavigate()
     const {orderid}=useParams()
@@ -37,11 +40,11 @@ const Payment = () => {
     const handlePayment=()=>{
       
       if(!paymentMethod){
-         alert("Please select a payment method")
+         toast.warn("Please select a payment method")
          return;
       }
       if(!address.name||!address.address||!address.state||!address.city){
-        alert("Please fill all delivery address fields");
+        toast.warn("Please fill all delivery address fields")
         return;
       }
         
@@ -51,10 +54,18 @@ const Payment = () => {
         body:JSON.stringify({status:"paid"})
       })
       .then(()=>(
-        alert("Payment Successfully")
+        toast.success("Payment successful")
         
       ))
       navigate(`/success/${orderid}`)
+      setTimeout(()=>{
+       Swal.fire({
+            title: "Success!",
+            text: "Order placed",
+            icon: "success",
+            confirmButtonText: "OK"
+          });
+      },4000)
     
     }
   return (

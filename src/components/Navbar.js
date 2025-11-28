@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Button } from 'react-bootstrap'
+import Swal from 'sweetalert2';
+
 
 const Navbar = () => {
   const userid=localStorage.getItem("userid")
@@ -26,8 +28,23 @@ const Navbar = () => {
    }
 
    const handleLogout=()=>{
-     localStorage.removeItem("userid")
+    Swal.fire({
+  title: "Are you sure?",
+  text: "Do you want to logout?",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Logout",
+  cancelButtonText: "Cancel"
+}).then((res)=>{
+  if(res.isConfirmed){
+    localStorage.removeItem("userid")
      navigate("/")
+  }
+
+})
+
+
+     
    }
   return (
     <>

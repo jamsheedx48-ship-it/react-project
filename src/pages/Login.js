@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom'
+import { toast } from 'react-toastify';
+
 
 const Login = () => {
   const navigate=useNavigate()
@@ -10,12 +12,12 @@ const Login = () => {
    e.preventDefault()
 
    if(!email.includes("@")){ 
-    alert("Enter valid email")
+   toast.error("Invalid email")
     return;
    }
    if(password.length<8){
-   alert("Password must be at least 8 characters")
-  return;
+    toast.error("Password must be at least 8 characters")
+   return;
    }
    
    fetch("http://localhost:5000/users")
@@ -23,11 +25,11 @@ const Login = () => {
    .then((data)=>{
      const olduser = data.find((user)=>user.email===email&&user.password===password)
      if(olduser){
-      alert("login succesful")
+      toast.success("login succes")
       localStorage.setItem("userid",olduser.id)
       navigate("/")
      }else{
-      alert("Incorrect email or password")
+      toast.error("incorrect email or password")
      }
    })
    

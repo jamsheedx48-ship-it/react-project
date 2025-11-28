@@ -5,7 +5,6 @@ import vid from "../assets/vid.mp4";
 import vid2 from "../assets/vid2.mp4";
 import vid3 from "../assets/vid3.mp4";
 import Item from '../components/Item';
-import ProductItem from '../components/ProductItem';
 
 
 const Home = () => {
