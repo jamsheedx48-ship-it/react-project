@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useNavigate,Link } from 'react-router-dom'
-const hi=history;
 
 const Login = () => {
   const navigate=useNavigate()
