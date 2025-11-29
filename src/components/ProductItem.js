@@ -17,6 +17,7 @@ const ProductItem = () => {
 
     const [search,setSearch]=useState("")
     const [product,setProduct]=useState([])
+    const [category,setCategory]=useState("all")
     
        useEffect(()=>{
       fetch("http://localhost:5000/products")
@@ -24,8 +25,13 @@ const ProductItem = () => {
       .then((data)=>setProduct(data))
     },[])
      
-    const FilteredProducts=product.filter((curr)=>
-     curr.name.toLowerCase().includes(search.toLowerCase())
+    const FilteredProducts=product.filter((curr)=>{
+       const searchMatch= curr.name.toLowerCase().includes(search.toLowerCase())
+       if(category==="featured"){
+        return curr.featured===true&&searchMatch
+       }
+       return searchMatch
+    }
     )
 
    
@@ -44,17 +50,20 @@ const ProductItem = () => {
      
 
       { <div className='btn-category text-center mb-4'>
-        <Button variant='dark' className='me-2'>All</Button>
-      <Button variant='dark' className='ms-2'>Featured</Button>
+        <Button variant={category==="all"? "dark" : "outline-dark"} className='me-2' onClick={()=>setCategory('all')}>All</Button>
+      <Button variant={category==="featured"?"dark" : "outline-dark"} className='ms-2' onClick={()=>setCategory('featured')}>Featured</Button>
       </div> }
 
       <Row>
         
+        
+        
         {FilteredProducts.map((curr) => (
+
           <Col md={4} sm={6} xs={12} className='mb-4' key={curr.id}>
         
-            <Card className='shadow-sm '  >
-              <Card.Img variant="top" className="product-img"src={curr.image} alt={curr.name} onClick={()=>details(curr.id)}/>
+            <Card className='shadow-sm mb-4 p-3 shadow-sm rouned-3'  >
+              <Card.Img  className="product-img"src={curr.image} alt={curr.name} onClick={()=>details(curr.id)}/>
               <Card.Body>
                 <Card.Title onClick={()=>details(curr.id)}>{curr.name}</Card.Title>
                 <Card.Text >

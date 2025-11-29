@@ -37,7 +37,18 @@
       "password": "rashida12"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "id": "2",
+      "name": "Kobe Air Force 1 Low",
+      "type": "Men's Shoes",
+      "price": 10795,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+      "featured": true,
+      "qty": 1,
+      "userId": "10a0"
+    }
+  ],
   "orders": [
     {
       "id": "3bd5",

@@ -23,7 +23,11 @@ const Cart = () => {
         <Card key={curr.id} className='cart-card'>
       <Row className='h-100'>
         <Col md={4} >
-        <Card.Img src={curr.image} className='cartimg' />
+        <div className="cart-img-wrapper">
+  <img src={curr.image} alt={curr.name} className="cartimg" />
+</div>
+
+        
       
         </Col>
         
@@ -32,10 +36,10 @@ const Cart = () => {
         <Card.Title >{curr.name}</Card.Title>
         <Card.Text>
           <p>{curr.type}</p>
-          <h4>${curr.price}</h4>
+          <h4>₹{curr.price}</h4>
           <div className='qty'>
             <button onClick={()=>DecreaseQty(curr.id)}>-</button>
-            <p>qty:{curr.qty}</p>
+            <p>{curr.qty}</p>
              <button onClick={()=>IncreaseQty(curr.id)}>+</button>
           </div>
         </Card.Text >
@@ -47,7 +51,7 @@ const Cart = () => {
     </Card>
     
        ))}
-       {!(cart.length===0)&&<h3 className='text-center'>Total price: ${TotalPrice}</h3>}
+       {!(cart.length===0)&&<h3 className='text-center'>Total price: ₹{TotalPrice}</h3>}
         <div className="d-flex justify-content-center">
              {!(cart.length===0)&&<Button variant='success' onClick={PayForAll}>Pay for all</Button>}
         </div>
