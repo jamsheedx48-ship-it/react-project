@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import {  useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import "./Payment.css"
+import "./css/Payment.css"
 import { toast } from 'react-toastify'
 import Swal from 'sweetalert2';
 

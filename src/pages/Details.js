@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {useParams } from 'react-router-dom'
 import { Row,Col, Button } from 'react-bootstrap'
-import "./Details.css"
+import "./css/Details.css"
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 

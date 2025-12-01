@@ -10,6 +10,13 @@ import About from '../pages/About'
 import Payment from '../pages/Payment'
 import PaymentSuccesful from '../pages/PaymentSuccesful'
 import Orders from '../pages/Orders'
+import AdminDashboard from '../admin/AdminDashboard'
+import AdminProducts from '../admin/AdminProducts'
+import AdminUsers from '../admin/AdminUsers'
+import AdminOrders from '../admin/AdminOrders'
+import Admin from '../admin/Admin'
+import AdminLogin from '../admin/AdminLogin'
+import AdminUsersDetails from '../admin/AdminUsersDetails'
 
 
 const MainRoute = () => {
@@ -26,6 +33,14 @@ const MainRoute = () => {
         <Route path='/success/:orderid' element={<PaymentSuccesful/>}/>
         <Route path='/payment/:orderid' element={<Payment/>}/>
         <Route path='/orders' element={<Orders/>}/>
+        <Route path='/admin' element={<AdminLogin/>}/>
+        <Route path='/adminpanel' element={<Admin/>}/>
+        <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
+        <Route path='/admin/products' element={<AdminProducts/>}/>
+        <Route path='/admin/orders' element={<AdminOrders/>}/>
+        <Route path='/admin/users' element={<AdminUsers/>}/>
+        <Route path='/admin/userdetails/:userid' element={<AdminUsersDetails/>}/>
+        <Route/>
        </Routes>
     </div>
   )

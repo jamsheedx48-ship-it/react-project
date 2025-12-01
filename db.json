@@ -35,16 +35,38 @@
       "name": "rashida",
       "email": "rashida@gmail.com",
       "password": "rashida12"
+    },
+    {
+      "id": "8427",
+      "name": "Adhil",
+      "email": "adhil@gmail.com",
+      "password": "adhil@123"
+    }
+  ],
+  "admin": [
+    {
+      "adminID": "1000",
+      "email": "jmd@gmail.com",
+      "password": "12345678",
+      "id": "db50"
     }
   ],
   "cart": [
     {
-      "id": "2",
-      "name": "Kobe Air Force 1 Low",
+      "id": "12",
+      "name": "Nike Total 90",
       "type": "Men's Shoes",
-      "price": 10795,
-      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-      "featured": true,
+      "price": 9695,
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/5dc83afa-3afb-40a4-940d-6d65e7cc89ef/TOTAL+90.png",
+      "qty": 1,
+      "userId": "10a0"
+    },
+    {
+      "id": "11",
+      "name": "Nike Zoom Vomero 5 Premium",
+      "type": "Men's Shoes",
+      "price": 15995,
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/f4270162-1162-4e3e-9176-1b04e43bb143/NIKE+ZOOM+VOMERO+5+PRM.png",
       "qty": 1,
       "userId": "10a0"
     }
@@ -230,6 +252,43 @@
       "total": 10257,
       "status": "paid",
       "date": "2025-11-28T09:38:52.307Z"
+    },
+    {
+      "id": "48df",
+      "userId": "10a0",
+      "items": [
+        {
+          "id": "2",
+          "name": "Kobe Air Force 1 Low",
+          "type": "Men's Shoes",
+          "price": 10795,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+          "featured": true,
+          "qty": 2,
+          "userId": "10a0"
+        }
+      ],
+      "total": 21590,
+      "status": "paid",
+      "date": "2025-11-30T16:44:29.362Z"
+    },
+    {
+      "id": "321f",
+      "userId": "10a0",
+      "items": [
+        {
+          "id": "17",
+          "name": "Tatum 4 PF",
+          "type": "Basketball Shoes",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a76bbc2d-8642-4005-b296-1dd75c6e8a03/JORDAN+TATUM+4+PF.png",
+          "qty": 1,
+          "userId": "10a0"
+        }
+      ],
+      "total": 11495,
+      "status": "paid",
+      "date": "2025-11-30T16:46:58.059Z"
     }
   ],
   "products": [

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Home.css"
+import "./css/Home.css"
 import Carousel from 'react-bootstrap/Carousel';
 import vid from "../assets/vid.mp4";
 import vid2 from "../assets/vid2.mp4";

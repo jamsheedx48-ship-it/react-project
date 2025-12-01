@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import { Card,Button,Row,Col } from 'react-bootstrap'
-import "./Cart.css"
+import "./css/Cart.css"
 
 
 const Cart = () => {
