@@ -1,294 +1,32 @@
 {
   "users": [
     {
-      "id": "10a0",
-      "name": "jamsheed",
-      "email": "jmd@gmail.com",
-      "password": "12345678"
-    },
-    {
-      "id": "1a40",
-      "name": "JAMES",
-      "email": "james@gmail.com",
-      "password": "999999999"
-    },
-    {
-      "id": "d3cc",
-      "name": "fahima p",
-      "email": "fahima@gmail.com",
-      "password": "000000000"
-    },
-    {
-      "id": "a4cd",
-      "name": "hi",
-      "email": "ji@gmail.com",
-      "password": "hii123hi123"
-    },
-    {
-      "id": "f930",
-      "name": "jhon",
-      "email": "jhon@gmail.com",
-      "password": "jhonjhon"
-    },
-    {
-      "id": "0124",
-      "name": "rashida",
-      "email": "rashida@gmail.com",
-      "password": "rashida12"
-    },
-    {
-      "id": "8427",
-      "name": "Adhil",
-      "email": "adhil@gmail.com",
-      "password": "adhil@123"
-    }
-  ],
-  "admin": [
-    {
-      "adminID": "1000",
+      "id": "0d95",
+      "name": "Jamsheed",
       "email": "jmd@gmail.com",
       "password": "12345678",
-      "id": "db50"
-    }
-  ],
-  "cart": [
-    {
-      "id": "12",
-      "name": "Nike Total 90",
-      "type": "Men's Shoes",
-      "price": 9695,
-      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/5dc83afa-3afb-40a4-940d-6d65e7cc89ef/TOTAL+90.png",
-      "qty": 1,
-      "userId": "10a0"
+      "status": "active"
     },
     {
-      "id": "11",
-      "name": "Nike Zoom Vomero 5 Premium",
-      "type": "Men's Shoes",
-      "price": 15995,
-      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/f4270162-1162-4e3e-9176-1b04e43bb143/NIKE+ZOOM+VOMERO+5+PRM.png",
-      "qty": 1,
-      "userId": "10a0"
-    }
-  ],
-  "orders": [
-    {
-      "id": "3bd5",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "7",
-          "name": "Nike Field General",
-          "type": "Women's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bef4ad00-36d9-4d46-a85c-8ba9ace962bd/WMNS+NIKE+FIELD+GENERAL.png",
-          "qty": 2,
-          "userId": "10a0"
-        }
-      ],
-      "total": 21590,
-      "status": "paid",
-      "date": "2025-11-27T16:04:38.152Z"
+      "id": "1f1d",
+      "name": "adhil",
+      "email": "adhil@gmail.com",
+      "password": "adhil@123",
+      "status": "blocked"
     },
     {
-      "id": "bc9b",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "2",
-          "name": "Kobe Air Force 1 Low",
-          "type": "Men's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-          "featured": true,
-          "qty": 1
-        }
-      ],
-      "total": 10795,
-      "status": "paid",
-      "date": "2025-11-28T04:10:28.755Z"
+      "id": "f5c8",
+      "name": "salih",
+      "email": "salih@gmail.com",
+      "password": "salih@123",
+      "status": "active"
     },
     {
-      "id": "6547",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "1",
-          "name": "LeBron XXIII 'Bubble Boy' EP",
-          "type": "Basketball Shoes",
-          "price": 18395,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/fff4cb65-6a77-420a-8104-813f0cfedc7e/LEBRON+XXIII+LUX+EP.png",
-          "featured": true,
-          "qty": 1,
-          "userId": "10a0"
-        },
-        {
-          "id": "2",
-          "name": "Kobe Air Force 1 Low",
-          "type": "Men's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-          "featured": true,
-          "qty": 1,
-          "userId": "10a0"
-        },
-        {
-          "id": "3",
-          "name": "Nike Air Max Moto 2K",
-          "type": "Women's shoes with reflective accents",
-          "price": 11495,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
-          "featured": true,
-          "qty": 1,
-          "userId": "10a0"
-        }
-      ],
-      "total": 40685,
-      "status": "paid",
-      "date": "2025-11-28T04:13:00.612Z"
-    },
-    {
-      "id": "b251",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "2",
-          "name": "Kobe Air Force 1 Low",
-          "type": "Men's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-          "featured": true,
-          "qty": 1
-        }
-      ],
-      "total": 10795,
-      "status": "paid",
-      "date": "2025-11-28T06:07:51.231Z"
-    },
-    {
-      "id": "f490",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "2",
-          "name": "Kobe Air Force 1 Low",
-          "type": "Men's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-          "featured": true,
-          "qty": 1
-        }
-      ],
-      "total": 10795,
-      "status": "paid",
-      "date": "2025-11-28T06:42:52.045Z"
-    },
-    {
-      "id": "01bb",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "7",
-          "name": "Nike Field General",
-          "type": "Women's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bef4ad00-36d9-4d46-a85c-8ba9ace962bd/WMNS+NIKE+FIELD+GENERAL.png",
-          "qty": 1,
-          "userId": "10a0"
-        }
-      ],
-      "total": 10795,
-      "status": "paid",
-      "date": "2025-11-28T09:01:43.263Z"
-    },
-    {
-      "id": "5242",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "8",
-          "name": "Air Jordan 1 Low SE",
-          "type": "Men's Shoes",
-          "price": 10257,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
-          "qty": 1,
-          "userId": "10a0"
-        }
-      ],
-      "total": 10257,
-      "status": "paid",
-      "date": "2025-11-28T09:07:20.916Z"
-    },
-    {
-      "id": "47ed",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "8",
-          "name": "Air Jordan 1 Low SE",
-          "type": "Men's Shoes",
-          "price": 10257,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
-          "qty": 1
-        }
-      ],
-      "total": 10257,
-      "status": "paid",
-      "date": "2025-11-28T09:37:44.999Z"
-    },
-    {
-      "id": "9e08",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "8",
-          "name": "Air Jordan 1 Low SE",
-          "type": "Men's Shoes",
-          "price": 10257,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
-          "qty": 1
-        }
-      ],
-      "total": 10257,
-      "status": "paid",
-      "date": "2025-11-28T09:38:52.307Z"
-    },
-    {
-      "id": "48df",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "2",
-          "name": "Kobe Air Force 1 Low",
-          "type": "Men's Shoes",
-          "price": 10795,
-          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-          "featured": true,
-          "qty": 2,
-          "userId": "10a0"
-        }
-      ],
-      "total": 21590,
-      "status": "paid",
-      "date": "2025-11-30T16:44:29.362Z"
-    },
-    {
-      "id": "321f",
-      "userId": "10a0",
-      "items": [
-        {
-          "id": "17",
-          "name": "Tatum 4 PF",
-          "type": "Basketball Shoes",
-          "price": 11495,
-          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a76bbc2d-8642-4005-b296-1dd75c6e8a03/JORDAN+TATUM+4+PF.png",
-          "qty": 1,
-          "userId": "10a0"
-        }
-      ],
-      "total": 11495,
-      "status": "paid",
-      "date": "2025-11-30T16:46:58.059Z"
+      "id": "650b",
+      "name": "Fahima",
+      "email": "fahima@gmail.com",
+      "password": "fahima@123",
+      "status": "active"
     }
   ],
   "products": [
@@ -304,7 +42,7 @@
       "id": "8",
       "name": "Air Jordan 1 Low SE",
       "type": "Men's Shoes",
-      "price": 10257,
+      "price": "10257",
       "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
       "qty": 1
     },
@@ -441,6 +179,257 @@
       "price": 11495,
       "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8326e5fe-d8d5-422f-984f-2e591732d5af/AIR+JORDAN+1+LOW+SE.png",
       "qty": 1
+    }
+  ],
+  "admin": [
+    {
+      "adminID": "1000",
+      "email": "jmd@gmail.com",
+      "password": "12345678",
+      "id": "db50"
+    }
+  ],
+  "cart": [
+    {
+      "id": "2",
+      "name": "Kobe Air Force 1 Low",
+      "type": "Men's Shoes",
+      "price": 10795,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+      "featured": true,
+      "qty": 1,
+      "userId": "650b"
+    },
+    {
+      "id": "3",
+      "name": "Nike Air Max Moto 2K",
+      "type": "Women's shoes with reflective accents",
+      "price": 11495,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
+      "featured": true,
+      "qty": 1,
+      "userId": "650b"
+    },
+    {
+      "id": "9",
+      "name": "Nike Shox Ride 2",
+      "type": "Men's Shoes",
+      "price": 15995,
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/1cbcc3f2-2ea4-4a9c-a1f0-74c661d9f3c9/NIKE+SHOX+RIDE+2.png",
+      "qty": 1,
+      "userId": "f5c8"
+    },
+    {
+      "id": "12",
+      "name": "Nike Total 90",
+      "type": "Men's Shoes",
+      "price": 9695,
+      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/5dc83afa-3afb-40a4-940d-6d65e7cc89ef/TOTAL+90.png",
+      "qty": 1,
+      "userId": "f5c8"
+    },
+    {
+      "id": "2",
+      "name": "Kobe Air Force 1 Low",
+      "type": "Men's Shoes",
+      "price": 10795,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+      "featured": true,
+      "qty": 1,
+      "userId": "f5c8"
+    }
+  ],
+  "orders": [
+    {
+      "id": "bae5",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "8",
+          "name": "Air Jordan 1 Low SE",
+          "type": "Men's Shoes",
+          "price": "10257",
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
+          "qty": 1
+        }
+      ],
+      "total": 10257,
+      "status": "paid",
+      "date": "2025-12-02T16:07:50.966Z"
+    },
+    {
+      "id": "3552",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "9",
+          "name": "Nike Shox Ride 2",
+          "type": "Men's Shoes",
+          "price": 15995,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/1cbcc3f2-2ea4-4a9c-a1f0-74c661d9f3c9/NIKE+SHOX+RIDE+2.png",
+          "qty": 1
+        }
+      ],
+      "total": 15995,
+      "status": "paid",
+      "date": "2025-12-02T16:08:15.383Z"
+    },
+    {
+      "id": "4a31",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "1",
+          "name": "LeBron XXIII 'Bubble Boy' EP",
+          "type": "Basketball Shoes",
+          "price": 18395,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/fff4cb65-6a77-420a-8104-813f0cfedc7e/LEBRON+XXIII+LUX+EP.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 18395,
+      "status": "paid",
+      "date": "2025-12-02T16:18:01.733Z"
+    },
+    {
+      "id": "52a4",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "5",
+          "name": "Air Jordan 1 Low Premium",
+          "type": "Men's Shoes",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/143bf45f-3f8a-45a3-889c-370e7f837e6b/AIR+JORDAN+1+LOW+PRM.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 11495,
+      "status": "paid",
+      "date": "2025-12-02T16:18:31.595Z"
+    },
+    {
+      "id": "9db6",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "3",
+          "name": "Nike Air Max Moto 2K",
+          "type": "Women's shoes with reflective accents",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 11495,
+      "status": "paid",
+      "date": "2025-12-02T16:20:50.031Z"
+    },
+    {
+      "id": "da8f",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "6",
+          "name": "Nike Air Force 1 '07",
+          "type": "Women's Shoes",
+          "price": 10795,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 10795,
+      "status": "paid",
+      "date": "2025-12-02T16:21:24.826Z"
+    },
+    {
+      "id": "3966",
+      "userId": "650b",
+      "items": [
+        {
+          "id": "7",
+          "name": "Nike Field General",
+          "type": "Women's Shoes",
+          "price": 10795,
+          "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bef4ad00-36d9-4d46-a85c-8ba9ace962bd/WMNS+NIKE+FIELD+GENERAL.png",
+          "qty": 1
+        }
+      ],
+      "total": 10795,
+      "status": "paid",
+      "date": "2025-12-02T16:46:48.676Z"
+    },
+    {
+      "id": "79e1",
+      "userId": "650b",
+      "items": [
+        {
+          "id": "11",
+          "name": "Nike Zoom Vomero 5 Premium",
+          "type": "Men's Shoes",
+          "price": 15995,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/f4270162-1162-4e3e-9176-1b04e43bb143/NIKE+ZOOM+VOMERO+5+PRM.png",
+          "qty": 1
+        }
+      ],
+      "total": 15995,
+      "status": "paid",
+      "date": "2025-12-02T16:47:08.920Z"
+    },
+    {
+      "id": "988b",
+      "userId": "f5c8",
+      "items": [
+        {
+          "id": "17",
+          "name": "Tatum 4 PF",
+          "type": "Basketball Shoes",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a76bbc2d-8642-4005-b296-1dd75c6e8a03/JORDAN+TATUM+4+PF.png",
+          "qty": 1
+        }
+      ],
+      "total": 11495,
+      "status": "paid",
+      "date": "2025-12-02T16:48:01.637Z"
+    },
+    {
+      "id": "45c2",
+      "userId": "f5c8",
+      "items": [
+        {
+          "id": "8",
+          "name": "Air Jordan 1 Low SE",
+          "type": "Men's Shoes",
+          "price": "10257",
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
+          "qty": 1
+        }
+      ],
+      "total": 10257,
+      "status": "paid",
+      "date": "2025-12-02T16:48:23.155Z"
+    },
+    {
+      "id": "f60e",
+      "userId": "f5c8",
+      "items": [
+        {
+          "id": "16",
+          "name": "Jordan Flight Court",
+          "type": "Men's Shoes",
+          "price": 8695,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/851370ef-8740-469a-b768-f03189b8f9b4/JORDAN+FLIGHT+COURT.png",
+          "qty": 1
+        }
+      ],
+      "total": 8695,
+      "status": "paid",
+      "date": "2025-12-02T16:48:45.289Z"
     }
   ]
 }

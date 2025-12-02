@@ -17,7 +17,9 @@ import AdminOrders from '../admin/AdminOrders'
 import Admin from '../admin/Admin'
 import AdminLogin from '../admin/AdminLogin'
 import AdminUsersDetails from '../admin/AdminUsersDetails'
-
+import AdminAddproducts from '../admin/AdminAddproducts'
+import EditProduct from '../admin/EditProduct'
+import ProtectedAdminRoute from '../admin/ProtectedAdminRoute'
 
 const MainRoute = () => {
   return (
@@ -34,13 +36,46 @@ const MainRoute = () => {
         <Route path='/payment/:orderid' element={<Payment/>}/>
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/admin' element={<AdminLogin/>}/>
-        <Route path='/adminpanel' element={<Admin/>}/>
-        <Route path='/admin/dashboard' element={<AdminDashboard/>}/>
-        <Route path='/admin/products' element={<AdminProducts/>}/>
-        <Route path='/admin/orders' element={<AdminOrders/>}/>
-        <Route path='/admin/users' element={<AdminUsers/>}/>
-        <Route path='/admin/userdetails/:userid' element={<AdminUsersDetails/>}/>
-        <Route/>
+        <Route path='/adminpanel' element={
+          <ProtectedAdminRoute>
+            <Admin/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/dashboard' element={
+          <ProtectedAdminRoute>
+            <AdminDashboard/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/products' element={
+          <ProtectedAdminRoute>
+            <AdminProducts/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/orders' element={
+          <ProtectedAdminRoute>
+            <AdminOrders/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/users' element={
+          <ProtectedAdminRoute>
+            <AdminUsers/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/userdetails/:userid' element={
+          <ProtectedAdminRoute>
+            <AdminUsersDetails/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/addproduct' element={
+          <ProtectedAdminRoute>
+            <AdminAddproducts/>
+          </ProtectedAdminRoute>
+        }/>
+        <Route path='/admin/editproduct/:id' element={
+          <ProtectedAdminRoute>
+            <EditProduct/>
+          </ProtectedAdminRoute>
+        }/>
        </Routes>
     </div>
   )

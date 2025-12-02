@@ -1,41 +1,65 @@
-import React, { useState } from 'react'
-import { Card,Row,Col } from 'react-bootstrap'
+import React, { useEffect, useState } from 'react'
+import { Table } from 'react-bootstrap'
 const AdminOrders = () => {
   const [order,setOrder]=useState([])
-  fetch(`http://localhost:5000/orders`)
+ 
+  const userId=localStorage.getItem("userid")
+  useEffect(()=>{
+     fetch(`http://localhost:5000/orders`)
   .then((res)=>res.json())
   .then((data)=>setOrder(data))
+  
+   
+  },[userId])
   return (
     <div>
        <h2 className='mt-5 text-center' >Orders</h2>
-        <div>
+        
        {order.length===0 &&  <h4 className='text-center text-muted'>No orders yet</h4>}
-       {order.map((order)=>(
-         <Card key={order.id} className='mb-4 p-3 shadow-sm rouned-3'>
+       
            
-            {order.items.map((curr)=>(
-                <Row key={curr.index} className='align-items-center py-2'>
-           
-           <Col md={12}>
-            <h5 >Order ID : <i>#{order.id}</i></h5>
-            <h5 className='fw-bold'>{curr.name}</h5>
-            <p className='text-muted mb-1'>{curr.price}*{curr.qty}</p>
-            <p>status:{order.status}</p> <br/>
-            <div className='text-end mt-2'>
-                <h4 className='fw-bold'>
-                Total:${order.total}
-            </h4>
-            </div>
-           </Col>
-           
-           </Row>
-            ))}
             
-           
-         </Card>
-       ))}
+             <Table striped bordered hover>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Order ID</th>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          
+          <th>Status</th>
+        </tr>
+      </thead>
       
-        </div>
+      <tbody>
+        {order.map((curr,index)=>
+      
+            curr.items.map(item=>(
+            
+               <tr key={item.id}>
+          <td>{index+1}</td>
+          <td>#{curr.id}</td>
+          <td>{item.name}</td>
+          <td>{item.price}</td>
+          <td>{item.qty}</td>
+          
+          <td>{curr.status}</td>
+        </tr>
+            
+            ))
+           
+      
+           
+        )}
+       
+       
+      </tbody>
+    </Table>
+          
+           
+      
+        
     </div>
   )
 }

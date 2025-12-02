@@ -9,6 +9,7 @@ const AdminLogin = () => {
    const [password,setPassword]=useState("")
 
    const handleLogin=(e)=>{
+    
     e.preventDefault()
       if(!email.includes("@")){
         toast.error("Invalid email")
@@ -23,8 +24,9 @@ const AdminLogin = () => {
       .then((res)=>res.json())
       .then((data)=>{
          if(data.length>0){
+          
           localStorage.setItem("adminLogin","true")
-          toast.success("Login succes")
+          toast.success("Login success")
           navigate("/adminpanel")
          }
          else{

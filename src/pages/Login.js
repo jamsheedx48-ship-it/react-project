@@ -21,13 +21,18 @@ const Login = () => {
    return;
    }
    
-   fetch("http://localhost:5000/users")
+   fetch(`http://localhost:5000/users?email=${email}&password=${password}`)
+
    .then((res)=>res.json())
    .then((data)=>{
-     const olduser = data.find((user)=>user.email===email&&user.password===password)
-     if(olduser){
+    const user =data[0]
+     if(user){
+       if(user.status==="blocked"){
+        toast.error("You blocked by admin")
+        return;
+       }
       toast.success("login succes")
-      localStorage.setItem("userid",olduser.id)
+      localStorage.setItem("userid",user.id)
       navigate("/")
      }else{
       toast.error("incorrect email or password")

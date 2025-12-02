@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import "./css/Reg.css"
+import { toast } from 'react-toastify'
 
 const Register = () => {
     const navigate=useNavigate()
@@ -24,7 +25,7 @@ const Register = () => {
         return;
      }
 
-        const user={name,email,password}
+        const user={name,email,password,status:"active"}
        
         fetch("http://localhost:5000/users",{
           method:"POST",
@@ -37,7 +38,7 @@ const Register = () => {
         })
         .then((res)=>res.json())
         .then(()=>{
-          alert("registered succesfully")
+          toast.success("registered succesfully")
           navigate("/login")
         })
         

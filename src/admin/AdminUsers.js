@@ -6,10 +6,36 @@ const AdminUsers = () => {
   const navigate=useNavigate()
   const [user,setUser]=useState([])
   useEffect(()=>{
-     fetch(`http://localhost:5000/users`)
-  .then((res)=>res.json())
-  .then((data)=>setUser(data))
+    
+      fetch(`http://localhost:5000/users`)
+      .then((res)=>res.json())
+      .then((data)=>setUser(data))
+    
   },[])
+    
+
+  const handleBlock=(id,status)=>{
+    const newstatus = status==="active"?"blocked":"active"
+    fetch(`http://localhost:5000/users/${id}`,{
+      method:"PATCH",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({status:newstatus})
+    })
+    .then(()=>{
+      fetch("http://localhost:5000/users")
+    .then(res => res.json())
+    .then(data => setUser(data));
+    })
+    
+  }
+
+  const handleRemove=(id)=>{
+    fetch(`http://localhost:5000/users/${id}`,{
+      method:"DELETE"
+    })
+
+    setUser((prev)=>prev.filter((curr)=>curr.id!==id))
+  }
   return (
     <div>
        <h2 className='mt-5 text-center  mb-4' >Manage Users</h2>
@@ -32,8 +58,9 @@ const AdminUsers = () => {
           <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.id}</td>
           <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.name}</td>
           <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.email}</td>
-          <td><Button variant='danger' className='me-2'>Block</Button>
-          <Button variant='warning' className='ms-2'>Remove</Button></td>
+          <td>{curr.status==="active" ? <Button variant='danger' className='me-2' onClick={()=>handleBlock(curr.id,curr.status)}>Block</Button> :
+           <Button variant='success' className='me-2' onClick={()=>handleBlock(curr.id,curr.status)}>Unblock</Button>}
+          <Button variant='warning' className='ms-2' onClick={()=>handleRemove(curr.id)}>Remove</Button></td>
         </tr>
         ))}
        
