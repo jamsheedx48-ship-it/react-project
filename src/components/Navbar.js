@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
 
         <div className='login-cart'>
-          {(userid)&& <Button variant='outline-secondary'>HI, {name}</Button>}
+          {(userid) ?<Button variant='outline-secondary'>HI, {name}</Button> :<Button variant='outline-secondary'>Guest</Button>}
           {!(userid)&&<button className='btnlogin' onClick={handleLogin}>Login</button>}
           {localStorage.getItem("userid") && (
             <button className='btnlogin' onClick={handleLogout}>Logout</button>

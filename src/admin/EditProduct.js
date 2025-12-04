@@ -40,7 +40,7 @@ const EditProduct = () => {
   return (
     <div>
         <h2>Edit product</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='container mx-4 mt-4'>
             <label>Name</label>
             <input
              className="form-control mb-2"

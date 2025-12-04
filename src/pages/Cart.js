@@ -22,14 +22,11 @@ const Cart = () => {
        {cart.map((curr)=>(
         <Card key={curr.id} className='cart-card'>
       <Row className='h-100'>
-        <Col md={4} >
-        <div className="cart-img-wrapper">
-  <img src={curr.image} alt={curr.name} className="cartimg" />
-</div>
-
-        
-      
-        </Col>
+       <Col md={3} className="cart-image-column">
+            <div className="cart-img-wrapper">
+                  <img src={curr.image} alt={curr.name} className="cartimg" />
+            </div>
+       </Col>
         
         <Col md={8} >
         <Card.Body>

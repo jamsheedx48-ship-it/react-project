@@ -54,10 +54,10 @@ const AdminUsers = () => {
       <tbody>
         {user.map((curr,index)=>(
              <tr key={curr.id}>
-          <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{index+1}</td>
-          <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.id}</td>
-          <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.name}</td>
-          <td  onClick={()=>navigate(`/admin/userdetails/${curr.id}`)}>{curr.email}</td>
+          <td  onClick={()=>navigate(`/adminpanel/userdetails/${curr.id}`)}>{index+1}</td>
+          <td  onClick={()=>navigate(`/adminpanel/userdetails/${curr.id}`)}>{curr.id}</td>
+          <td  onClick={()=>navigate(`/adminpanel/userdetails/${curr.id}`)}>{curr.name}</td>
+          <td  onClick={()=>navigate(`/adminpanel/userdetails/${curr.id}`)}>{curr.email}</td>
           <td>{curr.status==="active" ? <Button variant='danger' className='me-2' onClick={()=>handleBlock(curr.id,curr.status)}>Block</Button> :
            <Button variant='success' className='me-2' onClick={()=>handleBlock(curr.id,curr.status)}>Unblock</Button>}
           <Button variant='warning' className='ms-2' onClick={()=>handleRemove(curr.id)}>Remove</Button></td>

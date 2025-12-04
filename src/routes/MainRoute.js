@@ -14,68 +14,106 @@ import AdminDashboard from '../admin/AdminDashboard'
 import AdminProducts from '../admin/AdminProducts'
 import AdminUsers from '../admin/AdminUsers'
 import AdminOrders from '../admin/AdminOrders'
-import Admin from '../admin/Admin'
 import AdminLogin from '../admin/AdminLogin'
 import AdminUsersDetails from '../admin/AdminUsersDetails'
 import AdminAddproducts from '../admin/AdminAddproducts'
 import EditProduct from '../admin/EditProduct'
 import ProtectedAdminRoute from '../admin/ProtectedAdminRoute'
+import AdminLayout from '../admin/AdminLayout'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 
 const MainRoute = () => {
   return (
     <div>
        <Routes>
-         <Route path='/' element={<Home/>}/>
-         <Route path='/login' element={<Login/>}/>
-         <Route path='/register' element={<Register/>}/>
-         <Route path='/products' element={<Products/>}/>
-         <Route path='/details/:id' element={<Details/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/success/:orderid' element={<PaymentSuccesful/>}/>
-        <Route path='/payment/:orderid' element={<Payment/>}/>
-        <Route path='/orders' element={<Orders/>}/>
+         <Route path='/' element={
+          <>
+          <Navbar/>
+           <Home/>
+          <Footer/>
+          </>
+         }/>
+         <Route path='/login' element={
+          <>
+          <Navbar/>
+          <Login/>
+          <Footer/>
+          </>
+         }/>
+         <Route path='/register' element={
+          <>
+          <Navbar/>
+          <Register/>
+          <Footer/>
+          </>
+         }/>
+         <Route path='/products' element={
+          <>
+          <Navbar/>
+          <Products/>
+          <Footer/>
+          </>
+         }/>
+         <Route path='/details/:id' element={
+          <>
+          <Navbar/>
+          <Details/>
+          <Footer/>
+          </>
+         }/>
+        <Route path='/cart' element={
+          <>
+          <Navbar/>
+          <Cart/>
+          <Footer/>
+          </>
+        }/>
+        <Route path='/about' element={
+          <>
+          <Navbar/>
+          <About/>
+          <Footer/>
+          </>
+        }/>
+        <Route path='/success/:orderid' element={
+          <>
+          <Navbar/>
+          <PaymentSuccesful/>
+          <Footer/>
+          </>
+        }/>
+        <Route path='/payment/:orderid' element={
+          <>
+          <Navbar/>
+          <Payment/>
+          <Footer/>
+          </>
+        }/>
+        <Route path='/orders' element={
+          <>
+          <Navbar/>
+          <Orders/>
+          <Footer/>
+          </>
+        }/>
         <Route path='/admin' element={<AdminLogin/>}/>
         <Route path='/adminpanel' element={
           <ProtectedAdminRoute>
-            <Admin/>
+            <AdminLayout/>
           </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/dashboard' element={
-          <ProtectedAdminRoute>
-            <AdminDashboard/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/products' element={
-          <ProtectedAdminRoute>
-            <AdminProducts/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/orders' element={
-          <ProtectedAdminRoute>
-            <AdminOrders/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/users' element={
-          <ProtectedAdminRoute>
-            <AdminUsers/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/userdetails/:userid' element={
-          <ProtectedAdminRoute>
-            <AdminUsersDetails/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/addproduct' element={
-          <ProtectedAdminRoute>
-            <AdminAddproducts/>
-          </ProtectedAdminRoute>
-        }/>
-        <Route path='/admin/editproduct/:id' element={
-          <ProtectedAdminRoute>
-            <EditProduct/>
-          </ProtectedAdminRoute>
-        }/>
+        }>
+          <Route  index element={<AdminDashboard/>}/>
+        <Route path='products' element={<AdminProducts/>}/>
+        <Route path='orders' element={<AdminOrders/>}/>
+        <Route path='users' element={<AdminUsers/>}/>
+        <Route path='userdetails/:userid' element={<AdminUsersDetails/>}/>
+        <Route path='addproduct' element={<AdminAddproducts/>}/>
+        <Route path='editproduct/:id' element={<EditProduct/>}/>
+
+        </Route>
+        
        </Routes>
     </div>
   )

@@ -22,7 +22,7 @@ const AdminUsersDetails = () => {
 
         <Card className='shadow-sm'>
             <Row>
-                <Col md={12}>
+                <Col md={12} className='p-5'>
                 <p>User ID: <b> {user.id}</b></p>
                 <p>Name: <b> {user.name}</b></p>
 

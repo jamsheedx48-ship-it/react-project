@@ -75,7 +75,7 @@ const AdminAddproducts = () => {
             
             <div className='text-center my-4'>
                 <button type='submit' className='btn btn-success me-2'>Add</button>
-                <button type='button' className='btn btn-danger ms-2' onClick={()=>navigate("/admin/products")}>Cancel</button>
+                <button type='button' className='btn btn-danger ms-2' onClick={()=>navigate("/adminpanel/products")}>Cancel</button>
             </div>
         </form>
     </div>

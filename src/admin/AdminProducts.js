@@ -3,6 +3,7 @@ import "./css/AdminProducts.css"
 import { Card,Row,Col,Button} from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import Swal from 'sweetalert2'
 
 const AdminProducts = () => {
   const navigate=useNavigate()
@@ -22,15 +23,34 @@ const AdminProducts = () => {
     return curr;
     
 })
-   const handleRemove=(id)=>{
-     fetch(`http://localhost:5000/products/${id}`,{
-      method:"DELETE",
-     })
-     .then(()=>{
-      setProduct(product.filter((curr)=>curr.id!==id))
-      toast.success("Product removed")
-     })
-   }
+  const handleRemove = async (id) => {
+  const result = await Swal.fire({
+    title: "Are you sure?",
+    text: "Do you want to remove this product?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Remove",
+    cancelButtonText: "Cancel"
+  });
+
+  if (result.isConfirmed) {
+    try {
+      const res = await fetch(`http://localhost:5000/products/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to delete");
+      }
+
+      setProduct((prev) => prev.filter((item) => item.id !== id));
+      toast.success("Product removed");
+    } catch (err) {
+      toast.error("Something went wrong!");
+    }
+  }
+};
+
    
   return (
     <div>
@@ -43,7 +63,7 @@ const AdminProducts = () => {
       </div> }
       
         <div className='text-end my-4 me-3'>
-        <Button variant='success' onClick={()=>navigate("/admin/addproduct")}>Add products</Button>
+        <Button variant='success' onClick={()=>navigate('/adminpanel/addproduct')}>Add products</Button>
         </div>
         <Row>
        {FilteredProducts.map((curr)=>(
@@ -59,7 +79,7 @@ const AdminProducts = () => {
                 <Card.Text>
                   ₹{curr.price}
                 </Card.Text>
-                  <Button variant="dark" className='me-1' onClick={()=>navigate(`/admin/editproduct/${curr.id}`)}>Edit</Button>
+                  <Button variant="dark" className='me-1' onClick={()=>navigate(`/adminpanel/editproduct/${curr.id}`)}>Edit</Button>
                   <Button variant="warning" className='ms-1' onClick={() => handleRemove(curr.id)}>                 
                    Remove</Button>
               </Card.Body>

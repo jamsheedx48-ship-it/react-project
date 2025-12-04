@@ -12,20 +12,27 @@
       "name": "adhil",
       "email": "adhil@gmail.com",
       "password": "adhil@123",
-      "status": "blocked"
+      "status": "active"
     },
     {
-      "id": "f5c8",
-      "name": "salih",
+      "id": "3b51",
+      "name": "Salih",
       "email": "salih@gmail.com",
       "password": "salih@123",
       "status": "active"
     },
     {
-      "id": "650b",
+      "id": "584f",
       "name": "Fahima",
       "email": "fahima@gmail.com",
       "password": "fahima@123",
+      "status": "active"
+    },
+    {
+      "id": "c455",
+      "name": "Amal",
+      "email": "amal@gmail.com",
+      "password": "Amal@123",
       "status": "active"
     }
   ],
@@ -34,9 +41,10 @@
       "id": "7",
       "name": "Nike Field General",
       "type": "Women's Shoes",
-      "price": 10795,
+      "price": "10795",
       "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bef4ad00-36d9-4d46-a85c-8ba9ace962bd/WMNS+NIKE+FIELD+GENERAL.png",
-      "qty": 1
+      "qty": 1,
+      "featured": false
     },
     {
       "id": "8",
@@ -179,6 +187,33 @@
       "price": 11495,
       "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8326e5fe-d8d5-422f-984f-2e591732d5af/AIR+JORDAN+1+LOW+SE.png",
       "qty": 1
+    },
+    {
+      "id": "3a74",
+      "name": "Nike ACG Zoom Gaiadome GORE-TEX SE",
+      "type": "Men's Shoes",
+      "price": "20295",
+      "featured": false,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/88aa7d15-173e-4e65-b1b2-eb0616e0b292/ACG+ZOOM+GAIADOME+GTX+SE.png",
+      "qty": "1"
+    },
+    {
+      "id": "6519",
+      "name": "Nike Air Max TL 2.5",
+      "type": "Men's Shoes",
+      "price": "16995",
+      "featured": false,
+      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b3a3e958-f025-4822-b085-fb1d072dfa09/AIR+MAX+TL+2.5.png",
+      "qty": "1"
+    },
+    {
+      "id": "2363",
+      "name": "Nike Shox Ride 2 Premium",
+      "type": "Men's Shoes",
+      "price": "16995",
+      "featured": false,
+      "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/4ffaaac5-a2e5-4d34-8955-84094bcc9185/NIKE+SHOX+RIDE+2+PRM.png",
+      "qty": "1"
     }
   ],
   "admin": [
@@ -189,56 +224,7 @@
       "id": "db50"
     }
   ],
-  "cart": [
-    {
-      "id": "2",
-      "name": "Kobe Air Force 1 Low",
-      "type": "Men's Shoes",
-      "price": 10795,
-      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-      "featured": true,
-      "qty": 1,
-      "userId": "650b"
-    },
-    {
-      "id": "3",
-      "name": "Nike Air Max Moto 2K",
-      "type": "Women's shoes with reflective accents",
-      "price": 11495,
-      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
-      "featured": true,
-      "qty": 1,
-      "userId": "650b"
-    },
-    {
-      "id": "9",
-      "name": "Nike Shox Ride 2",
-      "type": "Men's Shoes",
-      "price": 15995,
-      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/1cbcc3f2-2ea4-4a9c-a1f0-74c661d9f3c9/NIKE+SHOX+RIDE+2.png",
-      "qty": 1,
-      "userId": "f5c8"
-    },
-    {
-      "id": "12",
-      "name": "Nike Total 90",
-      "type": "Men's Shoes",
-      "price": 9695,
-      "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/5dc83afa-3afb-40a4-940d-6d65e7cc89ef/TOTAL+90.png",
-      "qty": 1,
-      "userId": "f5c8"
-    },
-    {
-      "id": "2",
-      "name": "Kobe Air Force 1 Low",
-      "type": "Men's Shoes",
-      "price": 10795,
-      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-      "featured": true,
-      "qty": 1,
-      "userId": "f5c8"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "bae5",
@@ -348,7 +334,7 @@
     },
     {
       "id": "3966",
-      "userId": "650b",
+      "userId": null,
       "items": [
         {
           "id": "7",
@@ -365,7 +351,7 @@
     },
     {
       "id": "79e1",
-      "userId": "650b",
+      "userId": null,
       "items": [
         {
           "id": "11",
@@ -382,7 +368,7 @@
     },
     {
       "id": "988b",
-      "userId": "f5c8",
+      "userId": null,
       "items": [
         {
           "id": "17",
@@ -399,7 +385,7 @@
     },
     {
       "id": "45c2",
-      "userId": "f5c8",
+      "userId": null,
       "items": [
         {
           "id": "8",
@@ -416,7 +402,7 @@
     },
     {
       "id": "f60e",
-      "userId": "f5c8",
+      "userId": null,
       "items": [
         {
           "id": "16",
@@ -430,6 +416,118 @@
       "total": 8695,
       "status": "paid",
       "date": "2025-12-02T16:48:45.289Z"
+    },
+    {
+      "id": "f96d",
+      "userId": null,
+      "items": [
+        {
+          "id": "3",
+          "name": "Nike Air Max Moto 2K",
+          "type": "Women's shoes with reflective accents",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
+          "featured": true,
+          "qty": 2,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 22990,
+      "status": "paid",
+      "date": "2025-12-03T06:20:24.487Z"
+    },
+    {
+      "id": "fdbe",
+      "userId": null,
+      "items": [
+        {
+          "id": "3",
+          "name": "Nike Air Max Moto 2K",
+          "type": "Women's shoes with reflective accents",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/eea1a982-90f0-4e7f-b697-5dfd2b44204a/W+NIKE+AIR+MAX+MOTO+2K.png",
+          "featured": true,
+          "qty": 1,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 11495,
+      "status": "paid",
+      "date": "2025-12-03T06:58:15.090Z"
+    },
+    {
+      "id": "5a34",
+      "userId": null,
+      "items": [
+        {
+          "id": "5",
+          "name": "Air Jordan 1 Low Premium",
+          "type": "Men's Shoes",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/143bf45f-3f8a-45a3-889c-370e7f837e6b/AIR+JORDAN+1+LOW+PRM.png",
+          "featured": true,
+          "qty": 2,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 22990,
+      "status": "paid",
+      "date": "2025-12-03T07:00:45.273Z"
+    },
+    {
+      "id": "acdd",
+      "userId": null,
+      "items": [
+        {
+          "id": "12",
+          "name": "Nike Total 90",
+          "type": "Men's Shoes",
+          "price": 9695,
+          "image": "https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto/5dc83afa-3afb-40a4-940d-6d65e7cc89ef/TOTAL+90.png",
+          "qty": 2,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 19390,
+      "status": "paid",
+      "date": "2025-12-03T09:51:12.049Z"
+    },
+    {
+      "id": "916a",
+      "userId": null,
+      "items": [
+        {
+          "id": "8",
+          "name": "Air Jordan 1 Low SE",
+          "type": "Men's Shoes",
+          "price": "10257",
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
+          "qty": 1,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 10257,
+      "status": "paid",
+      "date": "2025-12-03T13:44:30.097Z"
+    },
+    {
+      "id": "d1cd",
+      "userId": null,
+      "items": [
+        {
+          "id": "7",
+          "name": "Nike Field General",
+          "type": "Women's Shoes",
+          "price": "10795",
+          "image": "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bef4ad00-36d9-4d46-a85c-8ba9ace962bd/WMNS+NIKE+FIELD+GENERAL.png",
+          "qty": 1,
+          "featured": false,
+          "userId": "f5c8"
+        }
+      ],
+      "total": 10795,
+      "status": "paid",
+      "date": "2025-12-03T14:26:30.798Z"
     }
   ]
 }

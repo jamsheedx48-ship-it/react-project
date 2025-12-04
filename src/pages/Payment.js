@@ -54,18 +54,17 @@ const Payment = () => {
         body:JSON.stringify({status:"paid"})
       })
       .then(()=>(
-        toast.success("Payment successful")
-        
+         navigate(`/success/${orderid}`)
       ))
       navigate(`/success/${orderid}`)
-      setTimeout(()=>{
+      
        Swal.fire({
             title: "Success!",
             text: "Order placed",
             icon: "success",
             confirmButtonText: "OK"
           });
-      },4000)
+      
     
     }
   return (

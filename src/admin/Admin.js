@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Row,Col, Button } from 'react-bootstrap'
 import "./css/Admin.css"
-import AdminProducts from './AdminProducts'
-import AdminUsers from './AdminUsers'
-import AdminOrders from './AdminOrders'
-import AdminDashboard from './AdminDashboard'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 const Admin= () => {
+    const [activeBtn, setActiveBtn] = useState("dashboard");
+
   const navigate=useNavigate()
-    const [btn,setBtn]=useState("dashboard")
 
     const handleLogout=()=>{
       Swal.fire({
@@ -35,22 +34,15 @@ const Admin= () => {
          <Col md={2} className='sidebar'>
            <h4 className='text-center mb-2'>Admin Panel</h4>
            <div className='text-center'>
-            <Button variant={btn==="dashboard"?"info":"dark"} className='m-2' onClick={()=>setBtn("dashboard")}>Dashboard</Button><br/> 
-            <Button variant={btn==="products"?"info":"dark"} className='m-2' onClick={()=>setBtn("products")}>Manage Products</Button><br/> 
-            <Button variant={btn==="users"?"info":"dark"} className='m-2' onClick={()=>setBtn("users")}>Manage Users</Button><br/>
-            <Button variant={btn==="orders"?"info":"dark"} className='m-2' onClick={()=>setBtn("orders")}>Orders</Button> <br/>
+            <NavLink to="/adminpanel"> <Button variant="dark" className='m-2'>Dashboard</Button></NavLink><br/> 
+            <NavLink to="products"> <Button variant="dark" className='m-2'>Manage Products</Button></NavLink><br/> 
+            <NavLink to="users"><Button variant="dark" className='m-2' >Manage Users</Button></NavLink><br/>
+            <NavLink to="orders"><Button variant="dark" className='m-2'>Orders</Button> </NavLink><br/>
             <Button variant='danger'className='m-2' onClick={handleLogout}>Logout</Button> <br/>
            </div>
          </Col>
 
-         <Col md={10}>
-            {btn === "dashboard" && <AdminDashboard />}
-            {btn === "products" && <AdminProducts />}
-            {btn === "users" && <AdminUsers />}
-            {btn === "orders" && <AdminOrders />}
-            
-
-         </Col>
+  
         </Row>
 
     </div>

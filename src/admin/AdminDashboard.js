@@ -28,7 +28,7 @@ const AdminDashboard = () => {
       .then((res) => res.json())
       .then((data) => setUsers(data))
   }, [])
-
+  
   // Function to calculate monthly sales
   const getMonthlySales = () => {
     const monthlySalesMap = {}
@@ -53,6 +53,7 @@ const AdminDashboard = () => {
   }
 
   const monthlySales = getMonthlySales()
+  
 
   return (
     <div className='container my-4 text-center'>
