@@ -12,7 +12,7 @@ const Item = () => {
   }
     const [item,setItem]=useState([])
     useEffect(()=>{
-    fetch("http://localhost:5000/products")
+    fetch("https://json-server-ecommerce-t2t5.onrender.com/products")
     .then((res)=>res.json())
     .then((data)=>{
       const featured=data.filter((curr)=>(

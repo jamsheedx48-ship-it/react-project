@@ -6,7 +6,7 @@ const AdminUsersDetails = () => {
     const {userid}=useParams()
     const [user,setUser]=useState([])
     useEffect(()=>{
-     fetch(`http://localhost:5000/users/${userid}`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/users/${userid}`)
      .then((res)=>res.json())
      .then((data)=>setUser(data))
     },[userid])

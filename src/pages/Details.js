@@ -10,7 +10,7 @@ const Details = () => {
   const {id}=useParams()
   const [Details,setDetails]=useState([])
   useEffect(()=>{
-     fetch(`http://localhost:5000/products/${id}`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/products/${id}`)
      .then((res)=>res.json())
      .then((data)=>setDetails(data))
   },[id])

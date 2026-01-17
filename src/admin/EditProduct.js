@@ -15,7 +15,7 @@ const EditProduct = () => {
         
     })
     useEffect(()=>{
-     fetch(`http://localhost:5000/products/${id}`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/products/${id}`)
      .then((res)=>res.json())
     .then((data)=>setProduct(data))
     },[id])
@@ -27,7 +27,7 @@ const EditProduct = () => {
      const handleSubmit=(e)=>{
      e.preventDefault()
 
-     fetch(`http://localhost:5000/products/${id}`,{
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/products/${id}`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(product)

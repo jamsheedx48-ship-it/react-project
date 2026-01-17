@@ -6,7 +6,7 @@ const Orders = () => {
     const [orders,setOrders]=useState([])
     const userId = localStorage.getItem("userid")
     useEffect(()=>{
-       fetch(`http://localhost:5000/orders/?userId=${userId}`)
+       fetch(`https://json-server-ecommerce-t2t5.onrender.com/orders/?userId=${userId}`)
        .then((res)=>res.json())
        .then((data)=>setOrders(data))
        .catch((err)=>console.log(err)

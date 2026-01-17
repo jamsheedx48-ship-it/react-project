@@ -11,7 +11,7 @@ const Navbar = () => {
   const userid=localStorage.getItem("userid")
   const [name,setName]=useState('')
  useEffect(()=>{
-   fetch(`http://localhost:5000/users/${userid}`)
+   fetch(`https://json-server-ecommerce-t2t5.onrender.com/users/${userid}`)
   .then((res)=>res.json())
   .then((data)=>setName(data.name))
  },[userid])

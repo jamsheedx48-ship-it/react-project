@@ -224,18 +224,7 @@
       "id": "db50"
     }
   ],
-  "cart": [
-    {
-      "id": "2",
-      "name": "Kobe Air Force 1 Low",
-      "type": "Men's Shoes",
-      "price": 10795,
-      "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
-      "featured": true,
-      "qty": 1,
-      "userId": "1f1d"
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "id": "bae5",
@@ -539,6 +528,116 @@
       "total": 10795,
       "status": "paid",
       "date": "2025-12-03T14:26:30.798Z"
+    },
+    {
+      "id": "68f0",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "2",
+          "name": "Kobe Air Force 1 Low",
+          "type": "Men's Shoes",
+          "price": 10795,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/b9b5170d-98f5-4ab6-9dee-6932d2337e31/KOBE+AIR+FORCE+1+LOW.png",
+          "featured": true,
+          "qty": 1,
+          "userId": "1f1d"
+        }
+      ],
+      "total": 10795,
+      "status": "paid",
+      "date": "2025-12-13T04:48:34.858Z"
+    },
+    {
+      "id": "9ad8",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "8",
+          "name": "Air Jordan 1 Low SE",
+          "type": "Men's Shoes",
+          "price": "10257",
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/63fb30fd-b8b2-47fa-ba5a-d1070df2f158/NIKE+DUNK+LOW+RETRO+SE.png",
+          "qty": 2,
+          "userId": "1f1d"
+        }
+      ],
+      "total": 20514,
+      "status": "paid",
+      "date": "2025-12-16T05:03:44.056Z"
+    },
+    {
+      "id": "b225",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "5",
+          "name": "Air Jordan 1 Low Premium",
+          "type": "Men's Shoes",
+          "price": 11495,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/143bf45f-3f8a-45a3-889c-370e7f837e6b/AIR+JORDAN+1+LOW+PRM.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 11495,
+      "status": "pending",
+      "date": "2025-12-16T05:05:02.926Z"
+    },
+    {
+      "id": "5e0b",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "1",
+          "name": "LeBron XXIII 'Bubble Boy' EP",
+          "type": "Basketball Shoes",
+          "price": 18395,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/fff4cb65-6a77-420a-8104-813f0cfedc7e/LEBRON+XXIII+LUX+EP.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 18395,
+      "status": "pending",
+      "date": "2025-12-16T05:05:31.136Z"
+    },
+    {
+      "id": "91bc",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "1",
+          "name": "LeBron XXIII 'Bubble Boy' EP",
+          "type": "Basketball Shoes",
+          "price": 18395,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/fff4cb65-6a77-420a-8104-813f0cfedc7e/LEBRON+XXIII+LUX+EP.png",
+          "featured": true,
+          "qty": 1
+        }
+      ],
+      "total": 18395,
+      "status": "pending",
+      "date": "2025-12-16T05:05:31.178Z"
+    },
+    {
+      "id": "b853",
+      "userId": "1f1d",
+      "items": [
+        {
+          "id": "1",
+          "name": "LeBron XXIII 'Bubble Boy' EP",
+          "type": "Basketball Shoes",
+          "price": 18395,
+          "image": "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/fff4cb65-6a77-420a-8104-813f0cfedc7e/LEBRON+XXIII+LUX+EP.png",
+          "featured": true,
+          "qty": 4,
+          "userId": "1f1d"
+        }
+      ],
+      "total": 73580,
+      "status": "pending",
+      "date": "2026-01-03T07:29:42.565Z"
     }
   ]
 }

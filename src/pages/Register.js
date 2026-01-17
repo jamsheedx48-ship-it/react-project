@@ -27,7 +27,7 @@ const Register = () => {
 
         const user={name,email,password,status:"active"}
        
-        fetch("http://localhost:5000/users",{
+        fetch("https://json-server-ecommerce-t2t5.onrender.com/users",{
           method:"POST",
           headers:{
             "Content-Type":"application/json",

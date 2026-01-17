@@ -5,7 +5,7 @@ const AdminOrders = () => {
  
   const userId=localStorage.getItem("userid")
   useEffect(()=>{
-     fetch(`http://localhost:5000/orders`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/orders`)
   .then((res)=>res.json())
   .then((data)=>setOrder(data))
   

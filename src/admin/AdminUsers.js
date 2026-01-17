@@ -7,7 +7,7 @@ const AdminUsers = () => {
   const [user,setUser]=useState([])
   useEffect(()=>{
     
-      fetch(`http://localhost:5000/users`)
+      fetch(`https://json-server-ecommerce-t2t5.onrender.com/users`)
       .then((res)=>res.json())
       .then((data)=>setUser(data))
     
@@ -16,13 +16,13 @@ const AdminUsers = () => {
 
   const handleBlock=(id,status)=>{
     const newstatus = status==="active"?"blocked":"active"
-    fetch(`http://localhost:5000/users/${id}`,{
+    fetch(`https://json-server-ecommerce-t2t5.onrender.com/users/${id}`,{
       method:"PATCH",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify({status:newstatus})
     })
     .then(()=>{
-      fetch("http://localhost:5000/users")
+      fetch("https://json-server-ecommerce-t2t5.onrender.com/users")
     .then(res => res.json())
     .then(data => setUser(data));
     })
@@ -30,7 +30,7 @@ const AdminUsers = () => {
   }
 
   const handleRemove=(id)=>{
-    fetch(`http://localhost:5000/users/${id}`,{
+    fetch(`https://json-server-ecommerce-t2t5.onrender.com/users/${id}`,{
       method:"DELETE"
     })
 

@@ -20,7 +20,7 @@ const AdminLogin = () => {
         return;
       }
       
-      fetch(`http://localhost:5000/admin?email=${email}&password=${password}`)
+      fetch(`https://json-server-ecommerce-t2t5.onrender.com/admin?email=${email}&password=${password}`)
       .then((res)=>res.json())
       .then((data)=>{
          if(data.length>0){

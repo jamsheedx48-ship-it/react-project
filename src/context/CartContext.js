@@ -14,7 +14,7 @@ export const CartProvider=({children})=>{
     useEffect(()=>{
         if(!userId) return;
 
-     fetch(`http://localhost:5000/cart?userId=${userId}`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart?userId=${userId}`)
      .then((res)=>res.json())
      .then((data)=>setCart(data))
 },[userId])
@@ -37,7 +37,7 @@ export const CartProvider=({children})=>{
          const exist=cart.find((curr)=>curr.id===p.id)
 
          if(exist){
-            fetch(`http://localhost:5000/cart/${exist.id}`,{
+            fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${exist.id}`,{
                 method:"PATCH",
                 headers:{"Content-Type":"application/json"},
                 body:JSON.stringify({qty:exist.qty+1})
@@ -61,7 +61,7 @@ export const CartProvider=({children})=>{
 
          }
          else{
-            fetch("http://localhost:5000/cart",{
+            fetch("https://json-server-ecommerce-t2t5.onrender.com/cart",{
                 method:"POST",
                 headers:{"Content-Type":"application/json"},
                 body: JSON.stringify({
@@ -80,7 +80,7 @@ export const CartProvider=({children})=>{
     }
 
     const RemoveTask=(id)=>{
-        fetch(`http://localhost:5000/cart/${id}`,{
+        fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${id}`,{
             method:"DELETE"
         })
      .then(()=>{
@@ -91,7 +91,7 @@ export const CartProvider=({children})=>{
     const IncreaseQty=(id)=>{
       const item= cart.find((curr)=>curr.id===id)
       if(!item) return;
-       fetch(`http://localhost:5000/cart/${id}`,{
+       fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${id}`,{
             method:"PATCH",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({qty:item.qty+1})
@@ -109,12 +109,12 @@ export const CartProvider=({children})=>{
       if(!item) return;
 
         if(item.qty===1){
-            fetch(`http://localhost:5000/cart/${id}`,{
+            fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${id}`,{
                 method:"DELETE"
             })
         }
          
-        fetch(`http://localhost:5000/cart/${id}`,{
+        fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${id}`,{
             method:"PATCH",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify({qty: item.qty-1})
@@ -156,7 +156,7 @@ export const CartProvider=({children})=>{
         }
         
 
-       fetch("http://localhost:5000/orders",{
+       fetch("https://json-server-ecommerce-t2t5.onrender.com/orders",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(OrderData)
@@ -164,7 +164,7 @@ export const CartProvider=({children})=>{
        .then((res)=>res.json())
        .then((data)=>{
         
-        fetch(`http://localhost:5000/cart/${product.id}`,{
+        fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${product.id}`,{
             method:"DELETE"
         })
         setCart((prev)=>prev.filter((curr)=>curr.id!==product.id))
@@ -194,7 +194,7 @@ export const CartProvider=({children})=>{
            date: new Date().toISOString()
         };
 
-        fetch("http://localhost:5000/orders",{
+        fetch("https://json-server-ecommerce-t2t5.onrender.com/orders",{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(OrderData)
@@ -202,7 +202,7 @@ export const CartProvider=({children})=>{
         .then((res)=>res.json())
         .then((data)=>{
             cart.forEach((curr)=>{
-            fetch(`http://localhost:5000/cart/${curr.id}`,{
+            fetch(`https://json-server-ecommerce-t2t5.onrender.com/cart/${curr.id}`,{
                 method:"DELETE",
             })
             setCart([]);

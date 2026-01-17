@@ -21,7 +21,7 @@ const Login = () => {
    return;
    }
    
-   fetch(`http://localhost:5000/users?email=${email}&password=${password}`)
+   fetch(`https://json-server-ecommerce-t2t5.onrender.com/users?email=${email}&password=${password}`)
 
    .then((res)=>res.json())
    .then((data)=>{

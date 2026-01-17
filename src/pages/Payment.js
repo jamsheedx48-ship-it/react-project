@@ -22,7 +22,7 @@ const Payment = () => {
 
 
     useEffect(()=>{
-       fetch(`http://localhost:5000/orders/${orderid}`)
+       fetch(`https://json-server-ecommerce-t2t5.onrender.com/orders/${orderid}`)
     .then((res=>res.json()))
     .then((data)=>{
        setOrder(data)
@@ -48,7 +48,7 @@ const Payment = () => {
         return;
       }
         
-      fetch(`http://localhost:5000/orders/${orderid}`,{
+      fetch(`https://json-server-ecommerce-t2t5.onrender.com/orders/${orderid}`,{
         method:"PATCH",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({status:"paid"})

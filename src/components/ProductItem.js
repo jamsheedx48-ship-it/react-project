@@ -20,7 +20,7 @@ const ProductItem = () => {
     const [category,setCategory]=useState("all")
     
        useEffect(()=>{
-      fetch("http://localhost:5000/products")
+      fetch("https://json-server-ecommerce-t2t5.onrender.com/products")
       .then((res)=>res.json())
       .then((data)=>setProduct(data))
     },[])

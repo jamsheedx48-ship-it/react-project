@@ -11,7 +11,7 @@ const AdminProducts = () => {
    const [product,setProduct]=useState([])
  
   useEffect(()=>{
-     fetch(`http://localhost:5000/products`)
+     fetch(`https://json-server-ecommerce-t2t5.onrender.com/products`)
   .then((res)=>res.json())
   .then((data)=>setProduct(data))
   },[])
@@ -35,7 +35,7 @@ const AdminProducts = () => {
 
   if (result.isConfirmed) {
     try {
-      const res = await fetch(`http://localhost:5000/products/${id}`, {
+      const res = await fetch(`https://json-server-ecommerce-t2t5.onrender.com/products/${id}`, {
         method: "DELETE",
       });
 
