@@ -4,10 +4,9 @@ import "./css/Admin.css"
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
 
 const Admin= () => {
-    const [activeBtn, setActiveBtn] = useState("dashboard");
+    
 
   const navigate=useNavigate()
 
