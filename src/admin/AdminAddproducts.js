@@ -22,7 +22,7 @@ const AdminAddproducts = () => {
             return;
         }
 
-        fetch(`http://localhost:5000/https://json-server-ecommerce-t2t5.onrender.com/products`,{
+        fetch(`https://json-server-ecommerce-t2t5.onrender.com/products`,{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(product)
