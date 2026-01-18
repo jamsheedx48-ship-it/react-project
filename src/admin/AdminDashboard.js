@@ -16,15 +16,15 @@ const AdminDashboard = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:5000/https://json-server-ecommerce-t2t5.onrender.com/products`)
+    fetch(`https://json-server-ecommerce-t2t5.onrender.com/products`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
 
-    fetch(`http://localhost:5000/https://json-server-ecommerce-t2t5.onrender.com/orders`)
+    fetch(`https://json-server-ecommerce-t2t5.onrender.com/orders`)
       .then((res) => res.json())
       .then((data) => setOrders(data))
 
-    fetch(`http://localhost:5000/https://json-server-ecommerce-t2t5.onrender.com/users`)
+    fetch(`https://json-server-ecommerce-t2t5.onrender.com/users`)
       .then((res) => res.json())
       .then((data) => setUsers(data))
   }, [])
