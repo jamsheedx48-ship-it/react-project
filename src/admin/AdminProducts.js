@@ -20,7 +20,7 @@ const AdminProducts = () => {
     if(category==="featured"){
       return curr.featured===true
     }
-    return curr;
+    return true;
     
 })
   const handleRemove = async (id) => {
@@ -69,7 +69,7 @@ const AdminProducts = () => {
        {FilteredProducts.map((curr)=>(
         <Col md={4} sm={6} xs={12} className='mb-4' key={curr.id}>
         
-            <Card className='shadow-sm mb-4 p-3 shadow-sm rouned-3'  >
+            <Card className='shadow-sm mb-4 p-3 rouned-3'  >
               <Card.Img  className="product-img"src={curr.image} alt={curr.name}/>
               <Card.Body>
                 <Card.Title >{curr.name}</Card.Title>
